@@ -4,6 +4,7 @@ public class gameRunner
 	public static void main(String[] args)
 		{
 			greetUser();
+			cardBoard.displayFirstCards();
 			cardBoard.displayBoard();
 		}
 	public static void greetUser()
@@ -53,7 +54,8 @@ public class gameRunner
 		String [] randomNumber1={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
 		int dieRoll2=(int)(Math.random()*randomNumber1.length);
 			{
-			System.out.println(name + " you were dealed a " + randomNumber1[dieRoll2] + " of " + randomFace1[dieRoll] + " card for your first card.");
+			cardBoard.firstCards[0][0]=randomNumber1[dieRoll2];
+			cardBoard.firstCards2[0][0]=randomFace1[dieRoll];
 			}
 		Scanner userInput2=new Scanner(System.in);
 		String [] randomFace2={"Diamonds","Clubs", "Spades", "Hearts"};
@@ -61,7 +63,9 @@ public class gameRunner
 		String [] randomNumber2={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
 		int dieRoll4=(int)(Math.random()*randomNumber1.length);
 			{
-			System.out.println("Your second card is a " + randomNumber2[dieRoll4] + " of " + randomFace2[dieRoll3] + ".");
+			cardBoard.firstCards[0][1]=randomNumber2[dieRoll4];
+			cardBoard.firstCards2[0][1]=randomFace2[dieRoll3];
+			System.out.println("Here are your Cards!");
 			}
 		}
 	}
