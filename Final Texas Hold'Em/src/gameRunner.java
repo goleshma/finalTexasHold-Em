@@ -4,8 +4,9 @@ public class gameRunner
 	public static void main(String[] args)
 		{
 			greetUser();
-			cardBoard.displayFirstCards();
-			cardBoard.displayBoard();
+			betting.bettingFirst();
+			dealer.dealerFirst();
+			dealer.dealer2();
 		}
 	public static void greetUser()
 	{
@@ -54,21 +55,19 @@ public class gameRunner
 		String [] randomNumber1={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
 		int dieRoll2=(int)(Math.random()*randomNumber1.length);
 			{
-			cardBoard.firstCards[0][0]=randomNumber1[dieRoll2];
-			cardBoard.firstCards2[0][0]=randomFace1[dieRoll];
-			}
 		Scanner userInput2=new Scanner(System.in);
 		String [] randomFace2={"Diamonds","Clubs", "Spades", "Hearts"};
-		int dieRoll3=(int)(Math.random()*randomFace1.length);
+		int dieRoll3=(int)(Math.random()*randomFace2.length);
 		String [] randomNumber2={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
-		int dieRoll4=(int)(Math.random()*randomNumber1.length);
-			{
-			cardBoard.firstCards[0][1]=randomNumber2[dieRoll4];
-			cardBoard.firstCards2[0][1]=randomFace2[dieRoll3];
-			System.out.println("Here are your Cards!");
+		int dieRoll4=(int)(Math.random()*randomNumber2.length);
+		
+				{
+				System.out.println("Your two cards: "+ randomNumber1[dieRoll2] + " of " + randomFace1[dieRoll] + " and " + randomNumber2[dieRoll4] + " of " + randomFace2[dieRoll3] +". Now your going to bet depending on how good your cards are.");
+				}
 			}
 		}
 	}
 }
+
 
 
