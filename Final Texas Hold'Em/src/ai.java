@@ -3,94 +3,18 @@ public class ai
 	{
 		public static void ai1()
 			{
-				String [] randomBet={"1", "2", "3" ,"4", "5", "6","7","8","9"};
-				int bet=(int)(Math.random()*randomBet.length);
-				if (bet==1)
+				Scanner userInput1=new Scanner(System.in);
+				String [] randomFace1={"Diamonds","Clubs", "Spades", "Hearts"};
+				int dieRoll=(int)(Math.random()*randomFace1.length);
+				String [] randomNumber1={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
+				int dieRoll2=(int)(Math.random()*randomNumber1.length);
 					{
-					(bet1.equals("30"));
+				Scanner userInput2=new Scanner(System.in);
+				String [] randomFace2={"Diamonds","Clubs", "Spades", "Hearts"};
+				int dieRoll3=(int)(Math.random()*randomFace2.length);
+				String [] randomNumber2={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
+				int dieRoll4=(int)(Math.random()*randomNumber2.length);
+				System.out.println("Your two cards: "+ randomNumber1[dieRoll2] + " of " + randomFace1[dieRoll] + "     " + randomNumber2[dieRoll4] + " of " + randomFace2[dieRoll3] +".");
 					}
-					
-				if (bet==2)
-					{
-					
-						
-				if (randomPlay==3)
-					{
-					if(Board.board [1][0].equals(" "))
-						{
-							Board.board [1][0]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==4)
-					{
-					if(Board.board [1][1].equals(" "))
-						{
-							Board.board [1][1]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==5)
-					{
-					if(Board.board [1][2].equals(" "))
-						{
-						Board.board [1][2]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==6)
-					{
-					if(Board.board [2][0].equals(" "))
-						{
-							Board.board [2][0]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==7)
-					{
-					if(Board.board [2][1].equals(" "))
-						{
-							Board.board [2][1]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==8)
-						{
-					if(Board.board [2][2].equals(" "))
-						{
-						Board.board [2][2]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-				if (randomPlay==9)
-					{
-					if(Board.board [1][2].equals(" "))
-						{
-							Board.board [1][2]="O";
-						}
-							else
-							{
-							computerPlay();
-							}
-					
-						}
-					}
-				}
 			}
-					}}}}}}}
-
-				
-			}
-	
+	}

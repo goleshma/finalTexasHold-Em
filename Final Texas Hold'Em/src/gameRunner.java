@@ -6,7 +6,12 @@ public class gameRunner
 			greetUser();
 			betting.bettingFirst();
 			dealer.dealerFirst();
+			betting.bettingSecond();
 			dealer.dealer2();
+			betting.bettingThird();
+			dealer.dealer3();
+			betting.bettingFourth();
+			checkForWon();
 		}
 	public static void greetUser()
 	{
@@ -48,7 +53,7 @@ public class gameRunner
 			else 
 				{
 				System.out.println("You think your so smart so I am just going to assume you know how to play the game. So lets start!");
-				
+				}
 		Scanner userInput1=new Scanner(System.in);
 		String [] randomFace1={"Diamonds","Clubs", "Spades", "Hearts"};
 		int dieRoll=(int)(Math.random()*randomFace1.length);
@@ -62,11 +67,16 @@ public class gameRunner
 		int dieRoll4=(int)(Math.random()*randomNumber2.length);
 		
 				{
-				System.out.println("Your two cards: "+ randomNumber1[dieRoll2] + " of " + randomFace1[dieRoll] + " and " + randomNumber2[dieRoll4] + " of " + randomFace2[dieRoll3] +". Now your going to bet depending on how good your cards are.");
+				System.out.println("Your two cards: "+ randomNumber1[dieRoll2] + " of " + randomFace1[dieRoll] + "     " + randomNumber2[dieRoll4] + " of " + randomFace2[dieRoll3] +".");
 				}
 			}
 		}
-	}
+		public static void checkForWon()
+		{
+		
+		
+		
+		}
 }
 
 

@@ -23,7 +23,7 @@ public class dealer
 		String [] dealerNumber3={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
 		int dieRoll5=(int)(Math.random()*dealerNumber3.length);
 			{
-			System.out.println("Dealer: These are your first cards to work with. Now you are going to bet on how the cards help your two cards make a winning hand.");
+			System.out.println("Dealer: These are your first cards to work with.");
 			System.out.println(""+dealerNumber1[dieRoll2] +" of "+dealerFace1[dieRoll]+"     " + dealerNumber2[dieRoll3]+ " of " + dealerFace2[dieRoll1]+"     " + dealerNumber3[dieRoll5]+ " of "+ dealerFace3[dieRoll4]);
 			}
 			
@@ -41,7 +41,22 @@ public class dealer
 			System.out.println(""+dealerNumber4[dieRoll7]+" of "+ dealerFace4[dieRoll6]+ " ");
 			}
 		}
+			
+		public static void dealer3()
+		{
+		Scanner userInput4=new Scanner(System.in);
+		String [] dealerFace5={"Diamonds","Clubs", "Spades", "Hearts"};
+		int dieRoll8=(int)(Math.random()*dealerFace5.length);
+		String [] dealerNumber5={"Ace","2","3","4","5","6", "7", "8", "9","10", "Jack", "Queen", "King"};
+		int dieRoll9=(int)(Math.random()*dealerNumber5.length);
+			{
+			System.out.println("Here is your 5th card and final card.");
+			System.out.println(""+dealerNumber5[dieRoll9]+" of "+ dealerFace5[dieRoll8]+ " ");
+			}
+		}
 	}
+		
+	
 
 
 
