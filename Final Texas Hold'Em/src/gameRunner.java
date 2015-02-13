@@ -1,6 +1,9 @@
+import java.awt.Component;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
 public class gameRunner
 {
 	public static void main(String[] args)
@@ -27,16 +30,15 @@ public class gameRunner
 	public static boolean isAStraight=false;
 	public static void greetUser()
 		{
+			String name = JOptionPane.showInputDialog("What is your name?");  
 			Scanner userInput=new Scanner(System.in);
-			System.out.println("Lets play a game of Texas Hold'Em!");
-			System.out.println("What is your name?");
-			String name=userInput.nextLine();
+			Component frame=null;
 			String [] randomCompliment={"Looking good today","You are so smart","I have a feeling you are going to win this game","Your outfit looks very nice, and super original","You are so much smarter than the cumputer you are definetly going to win"};
 			int dieRoll1=(int)(Math.random()*randomCompliment.length);
-			System.out.println("Hi there " + name + "! " + randomCompliment[dieRoll1] + "!");
-			System.out.println("Are you ready to play a game of Texas Hold'Em?");
-			System.out.println("(1) Yes");
-			System.out.println("(2) No");
+			JOptionPane.showMessageDialog(frame,"Hi there " + name + "! " + randomCompliment[dieRoll1] + "!");
+			JOptionPane.showMessageDialog(frame,"Lets play a game of Texas Hold'Em!");
+			Object[] options = {"(1) Yes","(2) No"};
+			JOptionPane.showOptionDialog(frame,"Are you ready to play a game of Texas Hold'Em?")
 			int choice=userInput.nextInt();
 				if (choice==1)
 					{
@@ -80,6 +82,7 @@ public class gameRunner
 					}
 		}
 
+	
 		public static void checkForWon()
 			{
 		ArrayList cardsDealt=new ArrayList();
@@ -96,20 +99,31 @@ public class gameRunner
 				{
 				System.out.println("You got a Flush!");	
 				}
-		for(int i=0;i<4;i++)
+		else if((dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll2)&&(dealer.dieRoll2==dealer.dieRoll3)||(dieRoll44==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dieRoll22==dealer.dieRoll2)&&(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dieRoll22==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dieRoll44==dealer.dieRoll2)&&(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll2==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9))
 			{
-			if (cardsDealt.get(i+1)==cardsDealt.get(i))
+			System.out.println("You have Four of a Kind!");
+			}
+		else if((dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll2)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll3)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll5)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll7)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll9)||(dieRoll44==dealer.dieRoll2)&&(dealer.dieRoll2==dealer.dieRoll3)||(dieRoll44==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dieRoll44==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dealer.dieRoll2==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll2==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll9)||(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll3==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll5==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)&&(dieRoll22==dieRoll44)||(dieRoll22==dealer.dieRoll2)||(dieRoll22==dealer.dieRoll3)||(dieRoll22==dealer.dieRoll5)||(dieRoll22==dealer.dieRoll7)||(dieRoll22==dealer.dieRoll8)||(dieRoll44==dealer.dieRoll2)||(dieRoll44==dealer.dieRoll3)||(dieRoll44==dealer.dieRoll5)||(dieRoll44==dealer.dieRoll7)||(dieRoll44==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll3)||(dealer.dieRoll2==dealer.dieRoll5)||(dealer.dieRoll2==dealer.dieRoll7)||(dealer.dieRoll2==dealer.dieRoll9)||(dealer.dieRoll3==dealer.dieRoll5)||(dealer.dieRoll3==dealer.dieRoll7)||(dealer.dieRoll3==dealer.dieRoll8)||(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll5==dealer.dieRoll9)||(dealer.dieRoll7==dealer.dieRoll8))
+			{
+			System.out.println("You got a Full House!");
+			}
+		else if ((dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll2)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll3)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll5)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll7)||(dieRoll22==dieRoll44)&&(dieRoll44==dealer.dieRoll9)||(dieRoll44==dealer.dieRoll2)&&(dealer.dieRoll2==dealer.dieRoll3)||(dieRoll44==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dieRoll44==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll3)&&(dealer.dieRoll3==dealer.dieRoll5)||(dealer.dieRoll2==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll2==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll9)||(dealer.dieRoll3==dealer.dieRoll5)&&(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll3==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9)||(dealer.dieRoll5==dealer.dieRoll7)&&(dealer.dieRoll7==dealer.dieRoll9))
 				{
-				isAStraight=true;
-				System.out.println("You got a Straight!");
+				System.out.println("You have Three of a Kind!");
 				}
-			else
-			{
-			isAStraight=false;
-			}
-		}			
-			}
+		else if ((dieRoll22==dieRoll44)||(dieRoll22==dealer.dieRoll2)||(dieRoll22==dealer.dieRoll3)||(dieRoll22==dealer.dieRoll5)||(dieRoll22==dealer.dieRoll7)||(dieRoll22==dealer.dieRoll8)||(dieRoll44==dealer.dieRoll2)||(dieRoll44==dealer.dieRoll3)||(dieRoll44==dealer.dieRoll5)||(dieRoll44==dealer.dieRoll7)||(dieRoll44==dealer.dieRoll9)||(dealer.dieRoll2==dealer.dieRoll3)||(dealer.dieRoll2==dealer.dieRoll5)||(dealer.dieRoll2==dealer.dieRoll7)||(dealer.dieRoll2==dealer.dieRoll9)||(dealer.dieRoll3==dealer.dieRoll5)||(dealer.dieRoll3==dealer.dieRoll7)||(dealer.dieRoll3==dealer.dieRoll8)||(dealer.dieRoll5==dealer.dieRoll7)||(dealer.dieRoll5==dealer.dieRoll9)||(dealer.dieRoll7==dealer.dieRoll8))
+				{
+				System.out.println("You have a Pair!");
+				}
+		else
+		{
+		System.out.println("You have a horrible hand that is worth absolutely nothing!");
+		}
+	System.out.println("Congratulations you won the game and $" +betting.pot3+"!");
+	}
 }
+
+
 
 
 

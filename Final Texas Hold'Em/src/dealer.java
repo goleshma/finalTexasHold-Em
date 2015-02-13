@@ -49,7 +49,7 @@ public class dealer
 		dieRoll7=(int)(Math.random()*dealerNumber4.length);
 			{
 			System.out.println("Here is your 4th card.");
-			System.out.println(""+dealerNumber5+dealerNumber4[dieRoll7]+" of "+ dealerFace4[dieRoll6]+ " ");
+			System.out.println(""+dealerNumber4[dieRoll7]+" of "+ dealerFace4[dieRoll6]+ " ");
 			}
 		}
 			
